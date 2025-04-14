@@ -2,7 +2,6 @@
 
 
 $execute{
-   
    ModData::pos=Vec3{
       .x = 0,
       .y = 105,
@@ -15,7 +14,6 @@ $execute{
 // specify parameters for the setup function in the Popup<...> template
 class settingsPopup : public geode::Popup<std::string const&> {
    protected:
-
 
        bool setup(std::string const&) override {
          this->setZOrder(100);
@@ -79,16 +77,12 @@ class settingsPopup : public geode::Popup<std::string const&> {
          ModData::pos.y=m_y;
          ModData::pos.z=m_rot;
        }
-       
-
-       
-   
+    
    public:
 
       float m_x, m_y, m_rot;
 
-
-       static settingsPopup* create(std::string const& text) {
+      static settingsPopup* create(std::string const& text) {
            auto ret = new settingsPopup();
            if (ret->initAnchored(240.f, 160.f, text)) {
                ret->autorelease();
