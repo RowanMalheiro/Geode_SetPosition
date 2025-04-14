@@ -8,7 +8,7 @@
 	},
 	"id": "zmarc.setposition",
 	"name": "SetPosition",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "zMarc",
-	"description": ""
+	"description": "Simple mod for changing your position and rotation to a set value in a Geometry Dash Level"
 }
