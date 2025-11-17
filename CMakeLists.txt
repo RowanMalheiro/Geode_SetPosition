@@ -6,7 +6,9 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 project(SETPOSITION VERSION 1.0.0)
 
-add_library(${PROJECT_NAME} SHARED src/main.cpp)
+file(GLOB SOURCES src/*.cpp)
+
+add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 if (NOT DEFINED ENV{GEODE_SDK})
     message(FATAL_ERROR "Unable to find Geode SDK! Please define GEODE_SDK environment variable to point to Geode")
@@ -15,5 +17,8 @@ else()
 endif()
 
 add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
+CPMAddPackage("gh:matcool/gd-imgui-cocos#653e533")
+target_link_libraries(${PROJECT_NAME} imgui-cocos)
+
 
 setup_geode_mod(${PROJECT_NAME})

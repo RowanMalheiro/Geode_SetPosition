@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Geode/Geode.hpp>
 #include <Geode/cocos/include/ccTypes.h>
 #include <Geode/modify/PlayerObject.hpp>
@@ -6,7 +8,7 @@
 #include <Geode/modify/PauseLayer.hpp>
 #include <Geode/ui/Layout.hpp>
 #include <Geode/cocos/robtop/xml/pugixml.hpp>
-#include <String>
+#include <string>
 
 #define FONT "bigFont.fnt"
 #define VALIDCHARS "0123456789."
